@@ -1,18 +1,20 @@
 public class Task1 {
+    private static final String TESTS_MESSAGE = "Test failed";
+
     /**
      * Write a program that counts the number of vowels in a given string.
      */
     public static void main(String[] args) {
         if (countVowels("Your Digital Career Starts Here") != 11) {
-            System.out.println("Test failed");
+            System.out.println(TESTS_MESSAGE);
         }
 
         if (countVowels("The quick brown fox jumps over the lazy dog") != 11) {
-            System.out.println("Test failed");
+            System.out.println(TESTS_MESSAGE);
         }
 
         if (countVowels("Lorem ipsum dolor sit amet, consetetur sadipscing elitr") != 18) {
-            System.out.println("Test failed");
+            System.out.println(TESTS_MESSAGE);
         }
     }
 
@@ -26,12 +28,8 @@ public class Task1 {
 
         for (char c : chars) {
             // Check if the character is a vowel
-            switch (c) {
-                case 'a':
-                case 'e':
-                case 'i':
-                case 'o':
-                case 'u':
+            switch (c) { // NOSONAR
+                case 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U':
                     vowels++;
                     break;
                 default:
