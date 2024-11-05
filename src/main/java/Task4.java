@@ -5,11 +5,11 @@ public class Task4 {
      * @param args Command line arguments
      */
     public static void main(String[] args) {
-        if (repeat("number", 3).equals("number1 number2 number3") == false) {
+        if (!repeat("number", 3).equals("number1 number2 number3")) {
             System.out.println("Test failed");
         }
 
-        if (repeat("article", 5).equals("article1 article2 article3 article4 article5") == false) {
+        if (!repeat("article", 5).equals("article1 article2 article3 article4 article5")) {
             System.out.println("Test failed");
         }
     }
